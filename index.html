@@ -1,23 +1,47 @@
-<BASE HREF="http://servicios.ips.gov.py/consulta_asegurado/">
-<html>
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-	<title>
-		INSTITUTO DE PREVISION SOCIAL
-	</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Instituto de Previsión Social</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background-color: #FFFFFF;
+			color: #000000;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			height: 100vh;
+		}
+
+		.top-frame {
+			height: 45vh;
+			border: none;
+		}
+
+		.main-frame {
+			flex-grow: 1;
+			border: none;
+		}
+	</style>
 </head>
-<form name="vesbrbacnorc" method="POST" action="consulta_asegurado.php">
-</form>
-<frameset rows="45%,*" frameborder="NO" border="0" framespacing="0" cols="*">
-	<frame name="topFrame" scrolling="NO" noresize src="comprobacion_derecho.php">
-		<frame name="mainFrame" src="comprobacion_derecho_detalle.php">
-</frameset>
-<noframes>
 
-	<body bgcolor="#FFFFFF" text="#000000">
+<body>
 
-	</body>
-</noframes>
+	<form name="vesbrbacnorc" method="POST" action="consulta_asegurado.php"></form>
+
+	<div class="container">
+		<iframe class="top-frame" src="http://servicios.ips.gov.py/consulta_asegurado/comprobacion_derecho.php"
+			scrolling="no"></iframe>
+		<iframe class="main-frame"
+			src="http://servicios.ips.gov.py/consulta_asegurado/comprobacion_derecho_detalle.php"></iframe>
+	</div>
+
+</body>
 
 </html>
